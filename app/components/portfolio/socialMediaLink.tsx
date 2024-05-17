@@ -1,9 +1,12 @@
-import Image from "next/image";
-
-type SocialMedia = "instagram" | "tiktok" | "youtube" | "twitter" | "other";
+import { SocialMediaPlatforms } from "@/app/types/socialMedia";
+import { ReactNode } from "react";
+import { SlSocialInstagram } from "react-icons/sl";
+import { PiTiktokLogoLight, PiYoutubeLogo } from "react-icons/pi";
+import { RiTwitterXFill } from "react-icons/ri";
+import { FiLink } from "react-icons/fi";
 
 type SocialMediaLinkProps = {
-  socialMedia: SocialMedia;
+  socialMedia: SocialMediaPlatforms;
   link: string;
 };
 
@@ -12,27 +15,14 @@ export const SocialMediaLink = ({
   link,
 }: SocialMediaLinkProps) => (
   <a href={link} target="_blank" className="hover:scale-105">
-    <Image
-      alt={SOCIAL_MEDIA_ICON_ALTS[socialMedia]}
-      src={SOCIAL_MEDIA_ICONS[socialMedia]}
-      height="30"
-      width="30"
-    />
+    {SOCIAL_MEDIA_ICONS[socialMedia]}
   </a>
 );
 
-const SOCIAL_MEDIA_ICONS: Record<SocialMedia, string> = {
-  instagram: "/instagram.svg",
-  tiktok: "/tiktok.svg",
-  youtube: "/youtube.svg",
-  twitter: "/twitter.svg",
-  other: "/link.svg",
-};
-
-const SOCIAL_MEDIA_ICON_ALTS: Record<SocialMedia, string> = {
-  instagram: "Instagram profile link",
-  tiktok: "TikTok profile link",
-  youtube: "Youtube profile link",
-  twitter: "Twitter profile link",
-  other: "Other social media profile link",
+export const SOCIAL_MEDIA_ICONS: Record<SocialMediaPlatforms, ReactNode> = {
+  instagram: <SlSocialInstagram size={25} />,
+  tiktok: <PiTiktokLogoLight size={25} />,
+  youtube: <PiYoutubeLogo size={25} />,
+  twitter: <RiTwitterXFill size={25} />,
+  other: <FiLink size={25} />,
 };

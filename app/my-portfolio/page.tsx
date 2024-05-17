@@ -39,7 +39,7 @@ const Page = () => {
         </Button>
       </div>
 
-      <div className="bg-neutral-100 w-full rounded-xl">
+      <div className="bg-neutral-100 w-full rounded-xl ">
         <SectionSwitch />
       </div>
     </>
