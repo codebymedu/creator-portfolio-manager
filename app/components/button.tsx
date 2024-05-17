@@ -1,24 +1,34 @@
 import clsx from "clsx";
 import { ReactNode } from "react";
+import Link from "next/link";
 
 type ButtonProps = {
   children: ReactNode;
   className?: string;
+  handleClick?: () => void;
   type?: "button" | "submit";
+  href?: string;
 };
 
 export const Button = ({
   children,
   type = "button",
+  handleClick,
   className,
-}: ButtonProps) => (
-  <button
-    className={clsx(
-      "bg-neutral-800 hover:bg-neutral-900 text-white px-8 py-2 rounded-md duration-75",
-      className
-    )}
-    type={type}
-  >
-    {children}
-  </button>
-);
+  href,
+}: ButtonProps) => {
+  const buttonClasses = clsx(
+    "bg-neutral-800 hover:bg-neutral-900 text-white p-2 rounded-md duration-75",
+    className
+  );
+
+  return href ? (
+    <Link href={href}>
+      <a className={buttonClasses}>{children}</a>
+    </Link>
+  ) : (
+    <button onClick={handleClick} className={buttonClasses} type={type}>
+      {children}
+    </button>
+  );
+};
