@@ -1,14 +1,13 @@
 import clsx from "clsx";
 import Image from "next/image";
+import { Title } from "@/app/components/title";
 
 export const WorkSamplesSection = () => (
   <div
     id="work"
     className="p-12 flex justify-between flex-col h-full bg-neutral-100 w-full rounded-xl"
   >
-    <h1 className="text-neutral-900 text-4xl font-bold mb-8">
-      Here Is My Best Work
-    </h1>
+    <Title className="mb-8">Here Is My Best Work</Title>
 
     <div
       className={clsx("grid  gap-8 auto-cols-auto", {

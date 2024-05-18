@@ -2,6 +2,7 @@ import { PiTiktokLogoLight, PiYoutubeLogo } from "react-icons/pi";
 import { RiTwitterXFill } from "react-icons/ri";
 import { SlSocialInstagram } from "react-icons/sl";
 import { Card } from "@/app/components/card";
+import { Title } from "@/app/components/title";
 
 export const AboutMeSection = () => (
   <div
@@ -11,9 +12,9 @@ export const AboutMeSection = () => (
     <div className="mb-8">
       <p className="text-xl lg:text-2xl text-neutral-400 mb-4">Hi, I'm Medu</p>
 
-      <h1 className="text-neutral-900 text-3xl lg:text-4xl font-bold mb-4">
+      <Title className="mb-4">
         I'm a Frontend Developer and Content Creator based in Germany
-      </h1>
+      </Title>
 
       <p className="text-neutral-600 mb-8">
         Aenean ac mollis odio. Donec eget diam eget sapien tincidunt gravida.

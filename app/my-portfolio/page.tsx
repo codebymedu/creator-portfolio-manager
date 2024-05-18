@@ -52,7 +52,7 @@ const Page = () => {
           Let's Create Something Amazing Together!
         </h1>
 
-        <p className="text-neutral-900 text-xl lg:text-sm -mt-8 text-center w-full">
+        <p className="text-neutral-900 text-xl lg:text-sm -mt-8 text-center w-full mb-32">
           myemail@gmail.com
         </p>
       </div>

@@ -17,17 +17,25 @@ export const Button = ({
   className,
   href,
 }: ButtonProps) => {
-  const buttonClasses = clsx(
-    "bg-neutral-900 hover:bg-neutral-800 text-white p-3 lg:p-2 rounded-md duration-75 text-xl lg:text-base",
-    className
-  );
-
   return href ? (
-    <Link href={href} className={buttonClasses}>
+    <Link
+      href={href}
+      className={clsx(
+        "bg-neutral-900 hover:bg-neutral-800 text-white p-3 lg:p-2 rounded-md duration-75 text-xl sm:text-base",
+        className
+      )}
+    >
       {children}
     </Link>
   ) : (
-    <button onClick={handleClick} className={buttonClasses} type={type}>
+    <button
+      onClick={handleClick}
+      className={clsx(
+        "bg-neutral-900 hover:bg-neutral-800 text-white p-3 lg:p-2 rounded-md duration-75 text-md sm:text-base",
+        className
+      )}
+      type={type}
+    >
       {children}
     </button>
   );

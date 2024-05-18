@@ -1,14 +1,13 @@
 import { Card } from "@/app/components/card";
 import { MdOutlineTerminal } from "react-icons/md";
+import { Title } from "@/app/components/title";
 
 export const SkillsSection = () => (
   <div
     id="skills"
     className="p-12 flex justify-between flex-col h-full bg-neutral-100 w-full rounded-xl"
   >
-    <h1 className="text-neutral-900 text-4xl font-bold mb-8">
-      Here Is What I Do Best
-    </h1>
+    <Title className="mb-8">Here Is What I Do Best</Title>
 
     <div className="grid grid-cols-1 lg:grid-cols-3 justify-center gap-8">
       {SKILLS.map((skill) => (
