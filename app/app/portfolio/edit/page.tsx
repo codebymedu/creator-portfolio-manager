@@ -1,6 +1,7 @@
-import { HiUser, HiPhoto } from "react-icons/hi2";
+import { HiUser, HiPlus } from "react-icons/hi2";
 import { Title } from "@/app/components/title";
 import { Button } from "@/app/components/button";
+import { SkillSelect } from "@/app/components/edit-portfolio/SkillSelect";
 
 const Page = () => {
   // --- RENDER ---
@@ -26,6 +27,26 @@ const Page = () => {
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
                 Public name
+              </label>
+
+              <div className="mt-2">
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autoComplete="name"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 sm:max-w-md focus:ring-inset focus:ring-neutral-600 sm:text-sm sm:leading-6"
+                />
+              </div>
+            </div>
+
+            {/* // make this searchable */}
+            <div className="sm:col-span-4">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
+                Role
               </label>
 
               <div className="mt-2">
@@ -263,13 +284,56 @@ const Page = () => {
         </div>
       </div>
 
+      <div className="space-y-12 mt-4">
+        <div className="border-b border-gray-900/10 pb-12">
+          <h2 className="text-base font-semibold leading-7 text-gray-900">
+            Work Samples/ Projects
+          </h2>
+
+          <div className="text-center">
+            <svg
+              className="mx-auto h-12 w-12 text-gray-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                vectorEffect="non-scaling-stroke"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"
+              />
+            </svg>
+            <h3 className="mt-2 text-sm font-semibold text-gray-900">
+              No projects
+            </h3>
+            <p className="mt-1 text-sm text-gray-500">
+              Get started by creating a new project.
+            </p>
+
+            <div className="mt-6 w-full justify-center flex">
+              <Button className="lg:px-6">
+                <HiPlus className="-ml-0.5 mr-1.5 h-5 w-5" aria-hidden="true" />
+                New Project
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="space-y-12 mt-4">
+        <div className="border-b border-gray-900/10 pb-12">
+          <h2 className="text-base font-semibold leading-7 text-gray-900">
+            Skills
+          </h2>
+
+          <SkillSelect />
+        </div>
+      </div>
+
       <div className="mt-6 flex items-center justify-end gap-x-6">
-        <button
-          type="button"
-          className="text-sm font-semibold leading-6 text-gray-900 "
-        >
-          Cancel
-        </button>
         <Button className="lg:px-8">Update portfolio</Button>
       </div>
     </form>
