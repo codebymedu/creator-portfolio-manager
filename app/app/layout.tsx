@@ -12,23 +12,24 @@ import {
 } from "react-icons/hi2";
 import { CiSettings } from "react-icons/ci";
 import clsx from "clsx";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 type LayoutProps = {
   children: ReactNode;
 };
 
 const navigation = [
-  { name: "Dashboard", href: "#", icon: RiHome6Line, current: true },
+  { name: "Dashboard", href: "/app", icon: RiHome6Line },
   {
     name: "Edit Portfolio",
-    href: "#",
+    href: "/app/portfolio/edit",
     icon: HiOutlineBriefcase,
-    current: false,
   },
 ];
 
 const userNavigation = [
-  { name: "Your profile", href: "#" },
+  { name: "Your profile", href: "/app/settings" },
   { name: "Sign out", href: "#" },
 ];
 
@@ -36,6 +37,7 @@ const Layout = ({ children }: LayoutProps) => {
   // --- STATE ---
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const pathname = usePathname();
 
   // --- RENDER ---
 
@@ -105,10 +107,10 @@ const Layout = ({ children }: LayoutProps) => {
                           <ul role="list" className="-mx-2 space-y-1">
                             {navigation.map((item) => (
                               <li key={item.name}>
-                                <a
+                                <Link
                                   href={item.href}
                                   className={clsx(
-                                    item.current
+                                    pathname === item.href
                                       ? "bg-neutral-700 text-white"
                                       : "text-neutral-200 hover:text-white hover:bg-neutral-700",
                                     "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
@@ -116,7 +118,7 @@ const Layout = ({ children }: LayoutProps) => {
                                 >
                                   <item.icon
                                     className={clsx(
-                                      item.current
+                                      pathname === item.href
                                         ? "text-white"
                                         : "text-neutral-200 group-hover:text-white",
                                       "h-6 w-6 shrink-0"
@@ -124,15 +126,15 @@ const Layout = ({ children }: LayoutProps) => {
                                     aria-hidden="true"
                                   />
                                   {item.name}
-                                </a>
+                                </Link>
                               </li>
                             ))}
                           </ul>
                         </li>
 
                         <li className="mt-auto">
-                          <a
-                            href="#"
+                          <Link
+                            href="/app/settings"
                             className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-neutral-200 hover:bg-neutral-700 hover:text-white"
                           >
                             <CiSettings
@@ -140,7 +142,7 @@ const Layout = ({ children }: LayoutProps) => {
                               aria-hidden="true"
                             />
                             Settings
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </nav>
@@ -168,10 +170,10 @@ const Layout = ({ children }: LayoutProps) => {
                   <ul role="list" className="-mx-2 space-y-1">
                     {navigation.map((item) => (
                       <li key={item.name}>
-                        <a
+                        <Link
                           href={item.href}
                           className={clsx(
-                            item.current
+                            pathname === item.href
                               ? "bg-neutral-700 text-white"
                               : "text-neutral-200 hover:text-white hover:bg-neutral-700",
                             "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
@@ -179,7 +181,7 @@ const Layout = ({ children }: LayoutProps) => {
                         >
                           <item.icon
                             className={clsx(
-                              item.current
+                              pathname === item.href
                                 ? "text-white"
                                 : "text-neutral-200 group-hover:text-white",
                               "h-6 w-6 shrink-0"
@@ -187,7 +189,7 @@ const Layout = ({ children }: LayoutProps) => {
                             aria-hidden="true"
                           />
                           {item.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
