@@ -12,25 +12,32 @@ export const WorkSamplesSection = () => (
 
     <div className="grid grid-cols-3 gap-8 auto-cols-auto">
       {WORK_SAMPLES.map((workSample) => (
-        <div className="">
-          <Card key={workSample.id} className="flex flex-col">
-            <Image
-              alt={`${workSample.title} preview`}
-              src={workSample.photo}
-              width={600}
-              height={600}
-              className="object-fill rounded-md border-2 border-neutral-50 mb-4"
-            />
+        <article
+          key={workSample.id}
+          className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
+        >
+          <Image
+            src={workSample.photo}
+            alt=""
+            className="absolute inset-0 -z-10 h-full w-full object-cover"
+            width={600}
+            height={600}
+          />
+          <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" />
 
-            <p className="mb-4">{workSample.title}</p>
+          <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
 
-            <p className="text-neutral-400 text-sm mb-4">
-              {workSample.shortDescription}
-            </p>
+          <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
+            <p className="mr-8">{workSample.shortDescription}</p>
+          </div>
 
-            <p className="mb-4 text-sm font-bold">Learn More</p>
-          </Card>
-        </div>
+          <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
+            <a href={"#"}>
+              <span className="absolute inset-0" />
+              {workSample.title}
+            </a>
+          </h3>
+        </article>
       ))}
     </div>
   </div>
