@@ -23,8 +23,8 @@ export const Button = ({
   );
 
   return href ? (
-    <Link href={href}>
-      <a className={buttonClasses}>{children}</a>
+    <Link href={href} className={buttonClasses}>
+      {children}
     </Link>
   ) : (
     <button onClick={handleClick} className={buttonClasses} type={type}>

@@ -2,14 +2,16 @@ import Image from "next/image";
 import { SocialMediaLink } from "@/app/components/portfolio/socialMediaLink";
 import { Button } from "@/app/components/button";
 import { HiOutlineEnvelope } from "react-icons/hi2";
-import { SectionSwitch } from "@/app/components/portfolio/sectionSwitch";
+import { AboutMeSection } from "@/app/components/portfolio/aboutMeSection";
+import { SkillsSection } from "@/app/components/portfolio/skillsSection";
+import { WorkSamplesSection } from "@/app/components/portfolio/workSamplesSection";
 
 const Page = () => {
   // --- RENDER ---
 
   return (
     <>
-      <div className="text-center bg-neutral-100 w-1/3 rounded-xl ">
+      <div className="text-center bg-neutral-100 w-1/3 rounded-xl self-start">
         <div className="rounded-md overflow-hidden mx-12 mt-12  mb-4">
           <Image
             alt="Profile Picture"
@@ -39,8 +41,12 @@ const Page = () => {
         </Button>
       </div>
 
-      <div className="bg-neutral-100 w-full rounded-xl ">
-        <SectionSwitch />
+      <div className="w-full gap-12 flex flex-col ">
+        <AboutMeSection />
+
+        <WorkSamplesSection />
+
+        <SkillsSection />
       </div>
     </>
   );
