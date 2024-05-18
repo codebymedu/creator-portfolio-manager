@@ -1,4 +1,4 @@
-import { Card } from "@/app/components/card";
+import clsx from "clsx";
 import Image from "next/image";
 
 export const WorkSamplesSection = () => (
@@ -10,24 +10,29 @@ export const WorkSamplesSection = () => (
       Here Is My Best Work
     </h1>
 
-    <div className="grid grid-cols-3 gap-8 auto-cols-auto">
+    <div
+      className={clsx("grid  gap-8 auto-cols-auto", {
+        "grid-cols-3": WORK_SAMPLES.length % 2 !== 0,
+        "grid-cols-2": WORK_SAMPLES.length % 2 === 0,
+      })}
+    >
       {WORK_SAMPLES.map((workSample) => (
         <article
           key={workSample.id}
-          className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
+          className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80 group"
         >
           <Image
             src={workSample.photo}
             alt=""
-            className="absolute inset-0 -z-10 h-full w-full object-cover"
+            className="absolute inset-0 -z-10 h-full w-full object-cover group-hover:scale-110"
             width={600}
             height={600}
           />
-          <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" />
+          <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40 group-hover:hidden" />
 
-          <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
+          <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10 group-hover:hidden" />
 
-          <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
+          <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300 group-hover:hidden">
             <p className="mr-8">{workSample.shortDescription}</p>
           </div>
 

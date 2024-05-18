@@ -47,6 +47,14 @@ const Page = () => {
         <WorkSamplesSection />
 
         <SkillsSection />
+
+        <h1 className="text-neutral-900 text-4xl font-bold  text-center w-full">
+          Let's Create Something Amazing Together!
+        </h1>
+
+        <p className="text-neutral-900  -mt-8 text-center w-full">
+          myemail@gmail.com
+        </p>
       </div>
     </>
   );
