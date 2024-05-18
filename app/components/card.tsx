@@ -9,7 +9,7 @@ type CardProps = {
 export const Card = ({ children, className }: CardProps) => (
   <div
     className={clsx(
-      "bg-neutral-800 text-white rounded-md px-8 py-6 ",
+      "bg-neutral-900 text-white rounded-md px-8 py-6 ",
       className
     )}
   >

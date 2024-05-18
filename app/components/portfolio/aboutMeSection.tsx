@@ -11,7 +11,7 @@ export const AboutMeSection = () => (
     <div className="mb-8">
       <p className="text-2xl  text-neutral-400 mb-4">Hi, I'm Medu</p>
 
-      <h1 className="text-4xl font-bold mb-4">
+      <h1 className="text-neutral-900 text-4xl font-bold mb-4">
         I'm a Frontend Developer and Content Creator based in Germany
       </h1>
 
