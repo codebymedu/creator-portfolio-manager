@@ -9,9 +9,9 @@ export const AboutMeSection = () => (
     className="p-12 flex justify-between flex-col h-full bg-neutral-100 w-full rounded-xl"
   >
     <div className="mb-8">
-      <p className="text-2xl  text-neutral-400 mb-4">Hi, I'm Medu</p>
+      <p className="text-xl lg:text-2xl text-neutral-400 mb-4">Hi, I'm Medu</p>
 
-      <h1 className="text-neutral-900 text-4xl font-bold mb-4">
+      <h1 className="text-neutral-900 text-3xl lg:text-4xl font-bold mb-4">
         I'm a Frontend Developer and Content Creator based in Germany
       </h1>
 
@@ -24,29 +24,29 @@ export const AboutMeSection = () => (
       </p>
     </div>
 
-    <div className="flex gap-8">
+    <div className="flex flex-col lg:flex-row gap-8">
       <Card className="flex flex-col items-center w-full">
         <SlSocialInstagram size={30} className="mb-4" />
 
-        <div className="text-lg">300+ Followers</div>
+        <div className="text-xl lg:text-lg">300+ Followers</div>
       </Card>
 
       <Card className="flex flex-col items-center w-full">
         <PiTiktokLogoLight size={30} className="mb-4" />
 
-        <div className="text-lg">700+ Followers</div>
+        <div className="text-xl lg:text-lg">700+ Followers</div>
       </Card>
 
       <Card className="flex flex-col items-center w-full">
         <PiYoutubeLogo size={35} className="mb-4" />
 
-        <div className="text-lg">1000+ Subs</div>
+        <div className="text-xl lg:text-lg">1000+ Subs</div>
       </Card>
 
       <Card className="flex flex-col items-center w-full">
         <RiTwitterXFill size={30} className="mb-4" />
 
-        <div className="text-lg">350+ Followers</div>
+        <div className="text-xl lg:text-lg">350+ Followers</div>
       </Card>
     </div>
   </div>

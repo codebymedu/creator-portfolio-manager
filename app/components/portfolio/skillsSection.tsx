@@ -10,9 +10,12 @@ export const SkillsSection = () => (
       Here Is What I Do Best
     </h1>
 
-    <div className="grid grid-cols-3 justify-center gap-8">
+    <div className="grid grid-cols-1 lg:grid-cols-3 justify-center gap-8">
       {SKILLS.map((skill) => (
-        <Card className="h-18 flex gap-5 hover:scale-105" key={skill.id}>
+        <Card
+          className="h-18 flex gap-5 hover:scale-105 text-lg lg:text-base"
+          key={skill.id}
+        >
           <MdOutlineTerminal size={25} />
 
           {skill.title}

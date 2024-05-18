@@ -12,8 +12,8 @@ export const WorkSamplesSection = () => (
 
     <div
       className={clsx("grid  gap-8 auto-cols-auto", {
-        "grid-cols-3": WORK_SAMPLES.length % 2 !== 0,
-        "grid-cols-2": WORK_SAMPLES.length % 2 === 0,
+        "grid-cols-1 lg:grid-cols-3": WORK_SAMPLES.length % 2 !== 0,
+        "grid-cols-1 lg:grid-cols-2": WORK_SAMPLES.length % 2 === 0,
       })}
     >
       {WORK_SAMPLES.map((workSample) => (
@@ -36,7 +36,7 @@ export const WorkSamplesSection = () => (
             <p className="mr-8">{workSample.shortDescription}</p>
           </div>
 
-          <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
+          <h3 className="mt-3 text-xl lg:text-lg font-semibold leading-6 text-white">
             <a href={"#"}>
               <span className="absolute inset-0" />
               {workSample.title}

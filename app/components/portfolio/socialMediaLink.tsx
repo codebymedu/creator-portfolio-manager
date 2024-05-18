@@ -14,7 +14,11 @@ export const SocialMediaLink = ({
   socialMedia,
   link,
 }: SocialMediaLinkProps) => (
-  <a href={link} target="_blank" className="hover:scale-105">
+  <a
+    href={link}
+    target="_blank"
+    className="hover:scale-105 scale-125 lg:scale-100"
+  >
     {SOCIAL_MEDIA_ICONS[socialMedia]}
   </a>
 );

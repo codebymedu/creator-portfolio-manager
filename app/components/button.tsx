@@ -18,7 +18,7 @@ export const Button = ({
   href,
 }: ButtonProps) => {
   const buttonClasses = clsx(
-    "bg-neutral-900 hover:bg-neutral-800 text-white p-2 rounded-md duration-75",
+    "bg-neutral-900 hover:bg-neutral-800 text-white p-3 lg:p-2 rounded-md duration-75 text-xl lg:text-base",
     className
   );
 
