@@ -10,7 +10,7 @@ import { HiChevronDown } from "react-icons/hi2";
 import { userNavigationLinks } from "@/app/components/layout/utils/layoutConstants";
 import clsx from "clsx";
 import Link from "next/link";
-import { LayoutHeaderCloseSideBarButton } from "@/app/components/layout/layoutHeaderCloseSideBarButton";
+import { LayoutHeaderCloseSideBarButton } from "@/app/components/layout/components/header/closeSideBarButton";
 
 export const LayoutHeader = () => (
   <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-gray-200 bg-white px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">

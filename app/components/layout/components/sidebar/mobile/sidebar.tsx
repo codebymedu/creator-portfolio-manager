@@ -3,9 +3,9 @@ import { DialogPanel, TransitionChild } from "@headlessui/react";
 import { CiSettings } from "react-icons/ci";
 import Link from "next/link";
 import { navigationLinks } from "@/app/components/layout/utils/layoutConstants";
-import { LayoutSideBarLink } from "@/app/components/layout/layoutSideBarLink";
-import { LayoutSideBarMobileDialog } from "@/app/components/layout/layoutSideBarMobileDialog";
-import { LayoutSideBarMobileOpenButton } from "@/app/components/layout/layoutSideBarMobileOpenButton";
+import { LayoutSideBarLink } from "@/app/components/layout/components/sidebar/sideBarLink";
+import { LayoutSideBarMobileDialog } from "@/app/components/layout/components/sidebar/mobile/dialog";
+import { LayoutSideBarMobileOpenButton } from "@/app/components/layout/components/sidebar/mobile/openButton";
 
 export const LayoutSideBarMobile = () => (
   <LayoutSideBarMobileDialog>

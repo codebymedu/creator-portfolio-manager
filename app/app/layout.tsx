@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
-import { LayoutSideBarMobile } from "@/app/components/layout/layoutSideBarMobile";
-import { LayoutSideBarDesktop } from "@/app/components/layout/layoutSideBarDesktop";
-import { LayoutHeader } from "@/app/components/layout/layoutHeader";
+import { LayoutSideBarMobile } from "@/app/components/layout/components/sidebar/mobile/sidebar";
+import { LayoutSideBarDesktop } from "@/app/components/layout/components/sidebar/desktop/sidebar";
+import { LayoutHeader } from "@/app/components/layout/components/header/header";
 import { LayoutProvider } from "@/app/components/layout/utils/layoutContext";
 
 type LayoutProps = {

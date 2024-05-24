@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, createContext, useMemo, useState } from "react";
+import { ReactNode, createContext, useState } from "react";
 
 export const LayoutContext = createContext({
   isSideBarOpen: false,
