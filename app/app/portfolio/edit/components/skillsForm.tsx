@@ -1,4 +1,4 @@
-import { SkillSelect } from "@/app/components/editPortfolio/SkillSelect";
+import { SkillSelect } from "@/components/editPortfolio/SkillSelect";
 
 export const SkillsForm = () => (
   <div className="space-y-12 mt-4">

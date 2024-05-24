@@ -1,9 +1,9 @@
-import { Title } from "@/app/components/title";
-import { Button } from "@/app/components/button";
-import { AboutMeForm } from "@/app/app/portfolio/edit/components/aboutMeForm";
-import { SocialMediaAccountsForm } from "@/app/app/portfolio/edit/components/socialMediaAccountsForm";
-import { ProjectsForm } from "@/app/app/portfolio/edit/components/projectsForm";
-import { SkillsForm } from "@/app/app/portfolio/edit/components/skillsForm";
+import { Title } from "@/components/title";
+import { Button } from "@/components/button";
+import { AboutMeForm } from "@/app/portfolio/edit/components/aboutMeForm";
+import { SocialMediaAccountsForm } from "@/app/portfolio/edit/components/socialMediaAccountsForm";
+import { ProjectsForm } from "@/app/portfolio/edit/components/projectsForm";
+import { SkillsForm } from "@/app/portfolio/edit/components/skillsForm";
 
 const Page = () => {
   // --- RENDER ---

@@ -1,5 +1,5 @@
-import { navigationLinks } from "@/app/components/layout/utils/layoutConstants";
-import { LayoutSideBarLink } from "@/app/components/layout/components/sidebar/sideBarLink";
+import { navigationLinks } from "@/app/utils/layoutConstants";
+import { LayoutSideBarLink } from "@/app/components/sidebar/sideBarLink";
 import { CiSettings } from "react-icons/ci";
 
 export const LayoutSideBarDesktop = () => (

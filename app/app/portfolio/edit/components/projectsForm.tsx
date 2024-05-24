@@ -1,4 +1,4 @@
-import { Button } from "@/app/components/button";
+import { Button } from "@/components/button";
 import { HiPlus } from "react-icons/hi2";
 
 export const ProjectsForm = () => {

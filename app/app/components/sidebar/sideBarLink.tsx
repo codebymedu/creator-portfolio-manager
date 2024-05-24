@@ -1,6 +1,6 @@
 "use client";
 
-import { navigationLinks } from "@/app/components/layout/utils/layoutConstants";
+import { navigationLinks } from "@/app/utils/layoutConstants";
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

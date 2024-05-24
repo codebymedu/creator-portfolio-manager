@@ -1,7 +1,7 @@
 "use client";
 
 import { Fragment, useContext } from "react";
-import { LayoutContext } from "@/app/components/layout/utils/layoutContext";
+import { LayoutContext } from "@/app/utils/layoutContext";
 import { IoMdClose } from "react-icons/io";
 import { TransitionChild } from "@headlessui/react";
 

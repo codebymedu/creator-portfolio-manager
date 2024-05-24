@@ -2,10 +2,10 @@ import { Fragment } from "react";
 import { DialogPanel, TransitionChild } from "@headlessui/react";
 import { CiSettings } from "react-icons/ci";
 import Link from "next/link";
-import { navigationLinks } from "@/app/components/layout/utils/layoutConstants";
-import { LayoutSideBarLink } from "@/app/components/layout/components/sidebar/sideBarLink";
-import { LayoutSideBarMobileDialog } from "@/app/components/layout/components/sidebar/mobile/dialog";
-import { LayoutSideBarMobileOpenButton } from "@/app/components/layout/components/sidebar/mobile/openButton";
+import { navigationLinks } from "@/app/utils/layoutConstants";
+import { LayoutSideBarLink } from "@/app/components/sidebar/sideBarLink";
+import { LayoutSideBarMobileDialog } from "@/app/components/sidebar/mobile/dialog";
+import { LayoutSideBarMobileOpenButton } from "@/app/components/sidebar/mobile/openButton";
 
 export const LayoutSideBarMobile = () => (
   <LayoutSideBarMobileDialog>
@@ -55,7 +55,7 @@ export const LayoutSideBarMobile = () => (
 
                 <li className="mt-auto">
                   <Link
-                    href="/app/settings"
+                    href="/settings"
                     className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-neutral-200 hover:bg-neutral-700 hover:text-white"
                   >
                     <CiSettings
