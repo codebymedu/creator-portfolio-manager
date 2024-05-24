@@ -1,6 +1,6 @@
 "use client";
 
-import { SKILLS } from "@/app/utils.ts/skills";
+import { SKILLS } from "@/app/utils/skills";
 import { ChangeEventHandler, useCallback, useState } from "react";
 
 export const SkillSelect = () => {

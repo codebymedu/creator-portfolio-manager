@@ -1,7 +1,7 @@
 import { HiUser, HiPlus } from "react-icons/hi2";
 import { Title } from "@/app/components/title";
 import { Button } from "@/app/components/button";
-import { SkillSelect } from "@/app/components/edit-portfolio/SkillSelect";
+import { SkillSelect } from "@/app/components/editPortfolio/SkillSelect";
 
 const Page = () => {
   // --- RENDER ---
