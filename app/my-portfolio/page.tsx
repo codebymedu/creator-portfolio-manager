@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { SocialMediaLink } from "@/components/portfolio/socialMediaLink";
+import { SocialMediaLink } from "@/my-portfolio/components/socialMediaLink";
 import { Button } from "@/components/button";
 import { HiOutlineEnvelope } from "react-icons/hi2";
-import { AboutMeSection } from "@/components/portfolio/aboutMeSection";
-import { SkillsSection } from "@/components/portfolio/skillsSection";
-import { WorkSamplesSection } from "@/components/portfolio/workSamplesSection";
+import { AboutMeSection } from "@/my-portfolio/components/aboutMeSection";
+import { SkillsSection } from "@/my-portfolio/components/skillsSection";
+import { WorkSamplesSection } from "@/my-portfolio/components/workSamplesSection";
 
 const Page = () => {
   // --- RENDER ---
