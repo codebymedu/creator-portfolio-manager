@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Button } from "@/components/button";
+import { Button } from "@/_components/button";
 import {
   HiOutlineBriefcase,
   HiOutlineUser,

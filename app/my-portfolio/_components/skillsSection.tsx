@@ -1,6 +1,6 @@
-import { Card } from "@/components/card";
+import { Card } from "@/_components/card";
 import { MdOutlineTerminal } from "react-icons/md";
-import { Title } from "@/components/title";
+import { Title } from "@/_components/title";
 
 export const SkillsSection = () => (
   <div

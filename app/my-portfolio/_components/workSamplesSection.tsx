@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import Image from "next/image";
-import { Title } from "@/components/title";
+import { Title } from "@/_components/title";
 
 export const WorkSamplesSection = () => (
   <div

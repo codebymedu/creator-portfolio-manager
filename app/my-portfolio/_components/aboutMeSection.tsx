@@ -1,8 +1,8 @@
 import { PiTiktokLogoLight, PiYoutubeLogo } from "react-icons/pi";
 import { RiTwitterXFill } from "react-icons/ri";
 import { SlSocialInstagram } from "react-icons/sl";
-import { Card } from "@/components/card";
-import { Title } from "@/components/title";
+import { Card } from "@/_components/card";
+import { Title } from "@/_components/title";
 
 export const AboutMeSection = () => (
   <div
