@@ -62,7 +62,7 @@ export const LayoutSideBarMobile = () => (
                       className="h-6 w-6 shrink-0 text-neutral-200 group-hover:text-white"
                       aria-hidden="true"
                     />
-                    Settings mobile
+                    Settings
                   </Link>
                 </li>
               </ul>

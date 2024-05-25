@@ -1,6 +1,7 @@
 import { navigationLinks } from "@/(app)/_utils/layoutConstants";
 import { LayoutSideBarLink } from "@/(app)/_components/sidebar/sideBarLink";
 import { CiSettings } from "react-icons/ci";
+import Link from "next/link";
 
 export const LayoutSideBarDesktop = () => (
   <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
@@ -22,9 +23,10 @@ export const LayoutSideBarDesktop = () => (
               ))}
             </ul>
           </li>
+
           <li className="mt-auto">
-            <a
-              href="#"
+            <Link
+              href="/settings"
               className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-neutral-200 hover:bg-neutral-700 hover:text-white"
             >
               <CiSettings
@@ -32,7 +34,7 @@ export const LayoutSideBarDesktop = () => (
                 aria-hidden="true"
               />
               Settings
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
