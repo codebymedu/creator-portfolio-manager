@@ -2,7 +2,7 @@ import { HiOutlineBriefcase } from "react-icons/hi2";
 import { RiHome6Line } from "react-icons/ri";
 
 export const navigationLinks = [
-  { id: "dashboard", name: "Dashboard", href: "", icon: RiHome6Line },
+  { id: "dashboard", name: "Dashboard", href: "/dashboard", icon: RiHome6Line },
   {
     id: "editPortfolio",
     name: "Edit Portfolio",
