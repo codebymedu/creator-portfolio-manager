@@ -4,7 +4,7 @@ import { Button } from "@/_components/button";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
 import { HiPlus } from "react-icons/hi2";
 
-export const NewProjectDialogOpenButton = () => {
+export const AddNewProjectDialogOpenButton = () => {
   // --- STATE ---
 
   const searchParams = useSearchParams();
@@ -14,7 +14,6 @@ export const NewProjectDialogOpenButton = () => {
   // --- CALLBACKS ---
 
   const handleOpen = () => {
-    console.log("asdddddddddddd");
     const newSearchParams = new URLSearchParams(searchParams);
     newSearchParams.set("dialog", "new-project");
 

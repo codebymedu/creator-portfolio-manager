@@ -10,7 +10,7 @@ import {
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
 import { HiPlus } from "react-icons/hi2";
 
-export const NewProjectDialog = () => {
+export const AddNewProjectDialog = () => {
   // --- STATE ---
 
   const searchParams = useSearchParams();
