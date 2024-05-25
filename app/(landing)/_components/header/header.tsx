@@ -4,6 +4,8 @@ import { HeaderProvider } from "@/(landing)/_components/header/_utils/headerCont
 import { HeaderDialogMobile } from "@/(landing)/_components/header/_components/dialogMobile";
 import { HeaderOpenDialogButton } from "@/(landing)/_components/header/_components/openDialogButton";
 import { HeaderCloseDialogButton } from "@/(landing)/_components/header/_components/closeDialogButton";
+import Link from "next/link";
+import { HeaderLinkMobile } from "@/(landing)/_components/header/_components/linkMobile";
 
 export const Header = () => (
   <HeaderProvider>
@@ -18,13 +20,13 @@ export const Header = () => (
 
         <div className="hidden lg:flex lg:gap-x-12">
           {navigationLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -57,13 +59,11 @@ export const Header = () => (
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 {navigationLinks.map((link) => (
-                  <a
+                  <HeaderLinkMobile
                     key={link.name}
                     href={link.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    {link.name}
-                  </a>
+                    name={link.name}
+                  />
                 ))}
               </div>
 
