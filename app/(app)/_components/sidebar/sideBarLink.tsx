@@ -29,7 +29,7 @@ export const LayoutSideBarLink = ({ id }: LayoutSideBarLinkProps) => {
       <Link
         href={link.href}
         className={clsx(
-          pathname === link.href
+          pathname.includes(link.href)
             ? "bg-neutral-700 text-white"
             : "text-neutral-200 hover:text-white hover:bg-neutral-700",
           "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
@@ -37,7 +37,7 @@ export const LayoutSideBarLink = ({ id }: LayoutSideBarLinkProps) => {
       >
         <link.icon
           className={clsx(
-            pathname === link.href
+            pathname.includes(link.href)
               ? "text-white"
               : "text-neutral-200 group-hover:text-white",
             "h-6 w-6 shrink-0"

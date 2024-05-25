@@ -10,7 +10,7 @@ const navigation = [
 
 const Layout = ({ children }: LayoutProps) => (
   <div className="grid grid-cols-12 ">
-    <nav className="flex flex-1 flex-col col-span-3 pr-32" aria-label="Sidebar">
+    <nav className="flex flex-1 flex-col col-span-2 pr-12" aria-label="Sidebar">
       <ul role="list" className="-mx-2 space-y-1">
         {navigation.map((item) => (
           <LayoutSideBarLink
@@ -22,7 +22,7 @@ const Layout = ({ children }: LayoutProps) => (
       </ul>
     </nav>
 
-    <div className="col-span-9"> {children}</div>
+    <div className="col-span-10"> {children}</div>
   </div>
 );
 
