@@ -9,7 +9,7 @@ export const SocialMediaAccountsForm = () => {
         </h2>
 
         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-          <div className="sm:col-span-4">
+          <div className="sm:col-span-4 md:w-96">
             <label
               htmlFor="instagramUsername"
               className="block text-sm font-medium leading-6 text-gray-900"
@@ -36,7 +36,7 @@ export const SocialMediaAccountsForm = () => {
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-          <div className="sm:col-span-4">
+          <div className="sm:col-span-4 md:w-96">
             <label
               htmlFor="xUsername"
               className="block text-sm font-medium leading-6 text-gray-900"
@@ -62,7 +62,7 @@ export const SocialMediaAccountsForm = () => {
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-          <div className="sm:col-span-4">
+          <div className="sm:col-span-4 md:w-96">
             <label
               htmlFor="youtubeUsername"
               className="block text-sm font-medium leading-6 text-gray-900"
@@ -88,7 +88,7 @@ export const SocialMediaAccountsForm = () => {
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-          <div className="sm:col-span-4">
+          <div className="sm:col-span-4 md:w-96">
             <label
               htmlFor="tikTokUsername"
               className="block text-sm font-medium leading-6 text-gray-900"
@@ -114,7 +114,7 @@ export const SocialMediaAccountsForm = () => {
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-          <div className="sm:col-span-4">
+          <div className="sm:col-span-4 md:w-96">
             <label
               htmlFor="otherLink"
               className="block text-sm font-medium leading-6 text-gray-900"

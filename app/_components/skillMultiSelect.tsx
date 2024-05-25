@@ -3,7 +3,7 @@
 import { SKILLS } from "@/_utils/skills";
 import { ChangeEventHandler, useCallback, useState } from "react";
 
-export const SkillSelect = () => {
+export const SkillMultiSelect = () => {
   // --- STATE ---
 
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);

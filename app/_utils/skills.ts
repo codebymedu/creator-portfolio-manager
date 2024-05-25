@@ -1,4 +1,6 @@
-export const SKILLS: { label: string; value: string }[] = [
+import { Option } from "@/_types/select";
+
+export const SKILLS: Option[] = [
   { label: "Content Creation", value: "contentCreation" },
   { label: "Photography", value: "photography" },
   { label: "Videography", value: "videography" },

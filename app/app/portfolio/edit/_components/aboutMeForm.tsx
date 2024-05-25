@@ -1,3 +1,4 @@
+import { RoleSelect } from "@/_components/roleSelect";
 import { HiUser } from "react-icons/hi2";
 
 export const AboutMeForm = () => {
@@ -11,7 +12,7 @@ export const AboutMeForm = () => {
         </h2>
 
         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-          <div className="sm:col-span-4">
+          <div className="sm:col-span-4 md:w-96">
             <label
               htmlFor="publicName"
               className="block text-sm font-medium leading-6 text-gray-900"
@@ -30,27 +31,11 @@ export const AboutMeForm = () => {
             </div>
           </div>
 
-          {/* // make this searchable */}
-          <div className="sm:col-span-4">
-            <label
-              htmlFor="role"
-              className="block text-sm font-medium leading-6 text-gray-900"
-            >
-              Role
-            </label>
-
-            <div className="mt-2">
-              <input
-                id="role"
-                name="role"
-                type="text"
-                autoComplete="role"
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 sm:max-w-md focus:ring-inset focus:ring-neutral-600 sm:text-sm sm:leading-6"
-              />
-            </div>
+          <div className="sm:col-span-4 md:w-96">
+            <RoleSelect />
           </div>
 
-          <div className="sm:col-span-4">
+          <div className="sm:col-span-4 md:w-96">
             <label
               htmlFor="username"
               className="block text-sm font-medium leading-6 text-gray-900"
@@ -74,7 +59,7 @@ export const AboutMeForm = () => {
             </div>
           </div>
 
-          <div className="sm:col-span-4">
+          <div className="sm:col-span-4 md:w-96">
             <label
               htmlFor="headline"
               className="block text-sm font-medium leading-6 text-gray-900"
@@ -94,7 +79,7 @@ export const AboutMeForm = () => {
             </div>
           </div>
 
-          <div className="col-span-full">
+          <div className="col-span-full md:w-96">
             <label
               htmlFor="aboutMe"
               className="block text-sm font-medium leading-6 text-gray-900"

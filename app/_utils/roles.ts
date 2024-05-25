@@ -1,4 +1,6 @@
-export const ROLES: { label: string; value: string }[] = [
+import { Option } from "@/_types/select";
+
+export const ROLES: Option[] = [
   { label: "Content Creator", value: "contentCreator" },
   { label: "Photographer", value: "photographer" },
   { label: "Videographer", value: "videographer" },
