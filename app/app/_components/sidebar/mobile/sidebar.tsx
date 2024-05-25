@@ -48,7 +48,7 @@ export const LayoutSideBarMobile = () => (
                 <li>
                   <ul role="list" className="-mx-2 space-y-1">
                     {navigationLinks.map((link) => (
-                      <LayoutSideBarLink id={link.id} />
+                      <LayoutSideBarLink key={link.id} id={link.id} />
                     ))}
                   </ul>
                 </li>

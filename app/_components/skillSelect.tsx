@@ -27,7 +27,7 @@ export const SkillSelect = () => {
   return (
     <div className="sm:col-span-4">
       <label
-        htmlFor="name"
+        htmlFor="skills"
         className="block text-sm font-medium leading-6 text-gray-900"
       >
         Search for skills
@@ -42,8 +42,8 @@ export const SkillSelect = () => {
               )
             )
           }
-          id="name"
-          name="name"
+          id="skills"
+          name="skills"
           type="text"
           placeholder="Start typing..."
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 sm:max-w-md focus:ring-inset focus:ring-neutral-600 sm:text-sm sm:leading-6"
@@ -70,7 +70,7 @@ export const SkillSelect = () => {
       <span className="flex flex-wrap">
         Selected:
         {selectedSkills.map((selectedSkill) => (
-          <span className="bg-neutral-100 p-2 m-2">
+          <span key={selectedSkill} className="bg-neutral-100 p-2 m-2">
             {SKILLS.find((skill) => skill.value === selectedSkill)?.label}
           </span>
         ))}

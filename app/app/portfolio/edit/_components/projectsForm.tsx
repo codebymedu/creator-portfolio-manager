@@ -1,6 +1,14 @@
 import { Button } from "@/_components/button";
 import { HiPlus } from "react-icons/hi2";
 
+type Project = {
+  photo: string;
+  readMore?: string;
+  title: string;
+  shortDescription: string;
+  longDescription: string;
+};
+
 export const ProjectsForm = () => {
   // --- RENDER ---
 

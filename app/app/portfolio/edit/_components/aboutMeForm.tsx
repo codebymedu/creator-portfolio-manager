@@ -13,7 +13,7 @@ export const AboutMeForm = () => {
         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div className="sm:col-span-4">
             <label
-              htmlFor="name"
+              htmlFor="publicName"
               className="block text-sm font-medium leading-6 text-gray-900"
             >
               Public name
@@ -21,8 +21,8 @@ export const AboutMeForm = () => {
 
             <div className="mt-2">
               <input
-                id="name"
-                name="name"
+                id="publicName"
+                name="publicName"
                 type="text"
                 autoComplete="name"
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 sm:max-w-md focus:ring-inset focus:ring-neutral-600 sm:text-sm sm:leading-6"
@@ -33,7 +33,7 @@ export const AboutMeForm = () => {
           {/* // make this searchable */}
           <div className="sm:col-span-4">
             <label
-              htmlFor="name"
+              htmlFor="role"
               className="block text-sm font-medium leading-6 text-gray-900"
             >
               Role
@@ -41,10 +41,10 @@ export const AboutMeForm = () => {
 
             <div className="mt-2">
               <input
-                id="name"
-                name="name"
+                id="role"
+                name="role"
                 type="text"
-                autoComplete="name"
+                autoComplete="role"
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 sm:max-w-md focus:ring-inset focus:ring-neutral-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -76,7 +76,7 @@ export const AboutMeForm = () => {
 
           <div className="sm:col-span-4">
             <label
-              htmlFor="name"
+              htmlFor="headline"
               className="block text-sm font-medium leading-6 text-gray-900"
             >
               Headline
@@ -84,11 +84,11 @@ export const AboutMeForm = () => {
 
             <div className="mt-2">
               <input
-                id="name"
-                name="name"
+                id="headline"
+                name="headline"
                 type="text"
                 placeholder="I am Jane, a social media marketer based in Berlin"
-                autoComplete="name"
+                autoComplete="headline"
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 sm:max-w-md focus:ring-inset focus:ring-neutral-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -96,20 +96,22 @@ export const AboutMeForm = () => {
 
           <div className="col-span-full">
             <label
-              htmlFor="about"
+              htmlFor="aboutMe"
               className="block text-sm font-medium leading-6 text-gray-900"
             >
               About
             </label>
+
             <div className="mt-2">
               <textarea
-                id="about"
-                name="about"
+                id="aboutMe"
+                name="aboutMe"
                 rows={3}
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-neutral-600 sm:text-sm sm:leading-6"
                 defaultValue={""}
               />
             </div>
+
             <p className="mt-3 text-sm leading-6 text-gray-600">
               Write a few sentences about yourself.
             </p>
@@ -117,13 +119,15 @@ export const AboutMeForm = () => {
 
           <div className="col-span-full">
             <label
-              htmlFor="photo"
+              htmlFor="profilePicture"
               className="block text-sm font-medium leading-6 text-gray-900"
             >
               Photo
             </label>
+
             <div className="mt-2 flex items-center gap-x-3">
               <HiUser className="h-12 w-12 text-gray-300" aria-hidden="true" />
+
               <button
                 type="button"
                 className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
