@@ -1,4 +1,4 @@
-import { SocialMediaPlatforms } from "@/types/socialMedia";
+import { SocialMediaPlatforms } from "@/_types/socialMedia";
 import { ReactNode } from "react";
 import { SlSocialInstagram } from "react-icons/sl";
 import { PiTiktokLogoLight, PiYoutubeLogo } from "react-icons/pi";

@@ -2,7 +2,7 @@
 
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, ReactNode, useContext } from "react";
-import { LayoutContext } from "@/app/_utils/layoutContext";
+import { LayoutContext } from "@/(app)/_utils/layoutContext";
 
 type LayoutSideBarMobileDialogProps = {
   children: ReactNode;

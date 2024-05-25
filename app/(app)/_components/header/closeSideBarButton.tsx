@@ -1,7 +1,7 @@
 "use client";
 
 import { useContext } from "react";
-import { LayoutContext } from "@/app/_utils/layoutContext";
+import { LayoutContext } from "@/(app)/_utils/layoutContext";
 import { HiMiniBars3 } from "react-icons/hi2";
 
 export const LayoutHeaderCloseSideBarButton = () => {

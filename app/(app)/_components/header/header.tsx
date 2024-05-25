@@ -7,10 +7,10 @@ import {
 } from "@headlessui/react";
 import { Fragment } from "react";
 import { HiChevronDown } from "react-icons/hi2";
-import { userNavigationLinks } from "@/app/_utils/layoutConstants";
+import { userNavigationLinks } from "@/(app)/_utils/layoutConstants";
 import clsx from "clsx";
 import Link from "next/link";
-import { LayoutHeaderCloseSideBarButton } from "@/app/_components/header/closeSideBarButton";
+import { LayoutHeaderCloseSideBarButton } from "@/(app)/_components/header/closeSideBarButton";
 
 export const LayoutHeader = () => (
   <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-gray-200 bg-white px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">

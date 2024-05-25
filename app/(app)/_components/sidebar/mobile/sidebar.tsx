@@ -2,10 +2,10 @@ import { Fragment } from "react";
 import { DialogPanel, TransitionChild } from "@headlessui/react";
 import { CiSettings } from "react-icons/ci";
 import Link from "next/link";
-import { navigationLinks } from "@/app/_utils/layoutConstants";
-import { LayoutSideBarLink } from "@/app/_components/sidebar/sideBarLink";
-import { LayoutSideBarMobileDialog } from "@/app/_components/sidebar/mobile/dialog";
-import { LayoutSideBarMobileOpenButton } from "@/app/_components/sidebar/mobile/openButton";
+import { navigationLinks } from "@/(app)/_utils/layoutConstants";
+import { LayoutSideBarLink } from "@/(app)/_components/sidebar/sideBarLink";
+import { LayoutSideBarMobileDialog } from "@/(app)/_components/sidebar/mobile/dialog";
+import { LayoutSideBarMobileOpenButton } from "@/(app)/_components/sidebar/mobile/openButton";
 
 export const LayoutSideBarMobile = () => (
   <LayoutSideBarMobileDialog>

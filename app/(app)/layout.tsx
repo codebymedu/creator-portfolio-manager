@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
-import { LayoutSideBarMobile } from "@/app/_components/sidebar/mobile/sidebar";
-import { LayoutSideBarDesktop } from "@/app/_components/sidebar/desktop/sidebar";
-import { LayoutHeader } from "@/app/_components/header/header";
-import { LayoutProvider } from "@/app/_utils/layoutContext";
+import { LayoutSideBarMobile } from "@/(app)/_components/sidebar/mobile/sidebar";
+import { LayoutSideBarDesktop } from "@/(app)/_components/sidebar/desktop/sidebar";
+import { LayoutHeader } from "@/(app)/_components/header/header";
+import { LayoutProvider } from "@/(app)/_utils/layoutContext";
 
 type LayoutProps = {
   children: ReactNode;
