@@ -29,15 +29,17 @@ export const HeroSection = () => (
 
     <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
       <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
-        <img
-          className="h-11"
-          src="https://tailwindui.com/img/logos/mark.svg?color=neutral&shade=600"
-          alt="Your Company"
-        />
+        <div className="w-full md:w-auto justify-end md:justify-normal flex -mt-4">
+          <img
+            className="h-11"
+            src="https://tailwindui.com/img/logos/mark.svg?color=neutral&shade=600"
+            alt="Your Company"
+          />
+        </div>
 
-        <div className="mt-24 sm:mt-32 lg:mt-16">
+        <div className="mt-12 md:mt-24 sm:mt-32 lg:mt-16">
           <a href="#" className="inline-flex space-x-6">
-            <span className="rounded-full bg-neutral-600/10 px-3 py-1 text-sm font-semibold leading-6 text-neutral-600 ring-1 ring-inset ring-neutral-600/10">
+            <span className="rounded-full bg-neutral-600/10 px-3 py-1 text-xs md:text-sm font-semibold flex items-center leading-4 md:leading-6 text-neutral-600 ring-1 ring-inset ring-neutral-600/10">
               Coming Soon
             </span>
             <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-600">
@@ -55,8 +57,8 @@ export const HeroSection = () => (
           completely free!
         </p>
 
-        <div className="mt-10 flex items-center gap-x-6">
-          <Button className="px-4 lg:px-4 text-base lg:text-base ">
+        <div className="mt-5 md:mt-10 flex items-center gap-x-6">
+          <Button className="px-4 lg:px-4 text-sm lg:text-base ">
             Get Started Now
           </Button>
 

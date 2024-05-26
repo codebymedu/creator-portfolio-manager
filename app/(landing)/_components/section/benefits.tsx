@@ -2,7 +2,10 @@ import clsx from "clsx";
 import { benefits } from "@/(landing)/_components/section/_utils/constants";
 
 export const BenefitsSection = () => (
-  <div className="relative isolate bg-white pb-32 pt-24 sm:pt-32" id="benefits">
+  <div
+    className="relative isolate bg-white pb-16 md:pb-32 pt-16 md:pt-24 sm:pt-32"
+    id="benefits"
+  >
     <div
       className="absolute inset-x-0 top-1/2 -z-10 -translate-y-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl"
       aria-hidden="true"

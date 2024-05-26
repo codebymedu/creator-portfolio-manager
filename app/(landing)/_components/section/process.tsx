@@ -1,7 +1,10 @@
 import { processSteps } from "@/(landing)/_components/section/_utils/constants";
 
 export const ProcessSection = () => (
-  <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-52 pb-24" id="process">
+  <div
+    className="mx-auto max-w-7xl px-6 lg:px-8 mt-32 md:mt-52 pb-24"
+    id="process"
+  >
     <div className="mx-auto max-w-2xl lg:text-center mb-16">
       <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
         How It Works
