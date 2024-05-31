@@ -58,7 +58,7 @@ export const HeroSection = () => (
         </p>
 
         <div className="mt-5 md:mt-10 flex items-center gap-x-6">
-          <Button className="px-4 lg:px-4 text-sm lg:text-base ">
+          <Button href="/signup" className="px-4 lg:px-4 text-sm lg:text-base ">
             Get Started Now
           </Button>
 

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Page = () => (
   <main>
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -18,6 +20,25 @@ const Page = () => (
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
         <form className="space-y-6" action="#" method="POST">
+          <div>
+            <label
+              htmlFor="username"
+              className="block text-sm font-medium leading-6 text-gray-900"
+            >
+              Username
+            </label>
+            <div className="mt-2">
+              <input
+                id="username"
+                name="username"
+                type="text"
+                autoComplete="username"
+                required
+                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-neutral-900 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
+
           <div>
             <label
               htmlFor="email"
@@ -70,12 +91,12 @@ const Page = () => (
 
         <p className="mt-10 text-center text-sm text-gray-500">
           Already a member?{" "}
-          <a
-            href="#"
+          <Link
+            href="/signin"
             className="font-semibold leading-6 text-neutral-900 hover:text-neutral-500"
           >
             Login
-          </a>
+          </Link>
         </p>
       </div>
     </div>
