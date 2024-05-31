@@ -21,8 +21,8 @@ const Page = () => (
       <AddNewProjectDialog />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-        <div className="">
-          <Button className="w-full bg-transparent text-red-600 hover:bg-red-50 gap-2">
+        <div>
+          <Button className="w-full bg-transparent bg-red-600 hover:bg-red-700 gap-2">
             <HiXMark className="text-2xl" /> Delete
           </Button>
 
@@ -33,8 +33,8 @@ const Page = () => (
           />
         </div>
 
-        <div className="">
-          <Button className="w-full bg-transparent text-red-600 hover:bg-red-50 gap-2">
+        <div>
+          <Button className="w-full bg-transparent bg-red-600 hover:bg-red-700 gap-2">
             <HiXMark className="text-2xl" /> Delete
           </Button>
 
@@ -45,8 +45,8 @@ const Page = () => (
           />
         </div>
 
-        <div className="">
-          <Button className="w-full bg-transparent text-red-600 hover:bg-red-50 gap-2">
+        <div>
+          <Button className="w-full bg-transparent bg-red-600 hover:bg-red-700 gap-2">
             <HiXMark className="text-2xl" /> Delete
           </Button>
 
