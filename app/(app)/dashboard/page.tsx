@@ -16,10 +16,12 @@ const Page = () => {
             <h2 className="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
               Welcome to your portfolio manager
             </h2>
+
             <p className="mt-4 text-lg leading-8 text-neutral-600">
               These are the latest analytics about your visitors
             </p>
           </div>
+
           <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.id} className="flex flex-col bg-neutral-900/5 p-8">
@@ -32,6 +34,12 @@ const Page = () => {
               </div>
             ))}
           </dl>
+
+          <div className="text-center mt-8">
+            <p className="mt-4 text-lg leading-8 text-neutral-600">
+              We're creating more advanced analytics for you.
+            </p>
+          </div>
         </div>
       </div>
     </div>

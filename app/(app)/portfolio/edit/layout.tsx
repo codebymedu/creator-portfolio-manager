@@ -6,6 +6,7 @@ type LayoutProps = { children: ReactNode };
 const navigation = [
   { name: "General", href: "/portfolio/edit", current: true },
   { name: "Projects", href: "/portfolio/edit/projects", current: false },
+  { name: "Customize (soon)", href: "#", current: false },
 ];
 
 const Layout = ({ children }: LayoutProps) => (
