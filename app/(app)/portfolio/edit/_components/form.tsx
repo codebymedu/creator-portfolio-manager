@@ -6,7 +6,6 @@ import { SocialMediaAccountsForm } from "@/(app)/portfolio/edit/_components/soci
 import { SkillsForm } from "@/(app)/portfolio/edit/_components/skillsForm";
 import { useFormState } from "react-dom";
 import { editPortfolio } from "@/_actions/portfolio";
-import { pick } from "lodash";
 import { EditPortfolioState } from "@/_actions/portfolio/types";
 
 export const EditPortfolioForm = () => {
@@ -19,8 +18,6 @@ export const EditPortfolioForm = () => {
     status: null,
   });
 
-  console.log({ formState });
-
   // --- RENDER ---
 
   return (
@@ -32,6 +29,7 @@ export const EditPortfolioForm = () => {
           photo: formState.errors?.photo,
           publicName: formState.errors?.publicName,
           username: formState.errors?.username,
+          role: formState.errors?.role,
         }}
       />
 

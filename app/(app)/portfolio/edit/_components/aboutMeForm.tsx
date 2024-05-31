@@ -9,6 +9,7 @@ type AboutMeFormProps = {
     headline?: string[];
     about?: string[];
     photo?: string[];
+    role?: string[];
   };
 };
 
@@ -60,11 +61,17 @@ export const AboutMeForm = ({ validationErrors }: AboutMeFormProps) => {
                 autoComplete="name"
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 sm:max-w-md focus:ring-inset focus:ring-neutral-600 sm:text-sm sm:leading-6"
               />
+
+              {validationErrors?.publicName && (
+                <p className="text-sm text-red-600">
+                  {validationErrors.publicName.join(", ")}
+                </p>
+              )}
             </div>
           </div>
 
           <div className="sm:col-span-4 md:w-96">
-            <RoleSelect />
+            <RoleSelect validationErrors={validationErrors?.role} />
           </div>
 
           <div className="sm:col-span-4 md:w-96">
@@ -74,11 +81,13 @@ export const AboutMeForm = ({ validationErrors }: AboutMeFormProps) => {
             >
               Username
             </label>
+
             <div className="mt-2">
               <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-neutral-600 sm:max-w-md">
                 <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">
                   CHANGETHISSSSSSSSSSSSSS.com/
                 </span>
+
                 <input
                   type="text"
                   name="username"
@@ -88,6 +97,12 @@ export const AboutMeForm = ({ validationErrors }: AboutMeFormProps) => {
                   placeholder="janesmith"
                 />
               </div>
+
+              {validationErrors?.username && (
+                <p className="text-sm text-red-600">
+                  {validationErrors.username.join(", ")}
+                </p>
+              )}
             </div>
           </div>
 
@@ -108,6 +123,12 @@ export const AboutMeForm = ({ validationErrors }: AboutMeFormProps) => {
                 autoComplete="headline"
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 sm:max-w-md focus:ring-inset focus:ring-neutral-600 sm:text-sm sm:leading-6"
               />
+
+              {validationErrors?.headline && (
+                <p className="text-sm text-red-600">
+                  {validationErrors.headline.join(", ")}
+                </p>
+              )}
             </div>
           </div>
 
@@ -125,8 +146,12 @@ export const AboutMeForm = ({ validationErrors }: AboutMeFormProps) => {
                 name="aboutMe"
                 rows={3}
                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-neutral-600 sm:text-sm sm:leading-6"
-                defaultValue={""}
               />
+              {validationErrors?.about && (
+                <p className="text-sm text-red-600">
+                  {validationErrors.about.join(", ")}
+                </p>
+              )}
             </div>
 
             <p className="mt-3 text-sm leading-6 text-gray-600">
@@ -150,8 +175,10 @@ export const AboutMeForm = ({ validationErrors }: AboutMeFormProps) => {
                 id="profilePicture"
                 name="profilePicture"
                 className="hidden"
+                accept="image/*"
                 onChange={handleImageChange}
               />
+
               <label
                 htmlFor="profilePicture"
                 className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 cursor-pointer"
@@ -165,6 +192,12 @@ export const AboutMeForm = ({ validationErrors }: AboutMeFormProps) => {
                   className="h-12 w-12 rounded-full"
                   alt="Profile preview"
                 />
+              )}
+
+              {validationErrors?.photo && (
+                <p className="text-sm text-red-600">
+                  {validationErrors.photo.join(", ")}
+                </p>
               )}
             </div>
           </div>

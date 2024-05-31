@@ -34,6 +34,7 @@ export const SocialMediaAccountsForm = ({
                 <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">
                   instagram.com/
                 </span>
+
                 <input
                   type="text"
                   name="instagramUsername"
@@ -44,6 +45,12 @@ export const SocialMediaAccountsForm = ({
                 />
               </div>
             </div>
+
+            {validationErrors?.instagramUsername && (
+              <p className="mt-2 text-sm text-red-600">
+                {validationErrors.instagramUsername.join(", ")}
+              </p>
+            )}
           </div>
         </div>
 
@@ -55,11 +62,13 @@ export const SocialMediaAccountsForm = ({
             >
               X (Twitter)
             </label>
+
             <div className="mt-2">
               <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-neutral-600 sm:max-w-md">
                 <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">
                   x.com/
                 </span>
+
                 <input
                   type="text"
                   name="xUsername"
@@ -70,6 +79,12 @@ export const SocialMediaAccountsForm = ({
                 />
               </div>
             </div>
+
+            {validationErrors?.xUsername && (
+              <p className="mt-2 text-sm text-red-600">
+                {validationErrors.xUsername.join(", ")}
+              </p>
+            )}
           </div>
         </div>
 
@@ -81,11 +96,13 @@ export const SocialMediaAccountsForm = ({
             >
               Youtube
             </label>
+
             <div className="mt-2">
               <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-neutral-600 sm:max-w-md">
                 <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">
                   youtube.com/@
                 </span>
+
                 <input
                   type="text"
                   name="youtubeUsername"
@@ -96,6 +113,12 @@ export const SocialMediaAccountsForm = ({
                 />
               </div>
             </div>
+
+            {validationErrors?.youtubeUsername && (
+              <p className="mt-2 text-sm text-red-600">
+                {validationErrors.youtubeUsername.join(", ")}
+              </p>
+            )}
           </div>
         </div>
 
@@ -107,11 +130,13 @@ export const SocialMediaAccountsForm = ({
             >
               TikTok
             </label>
+
             <div className="mt-2">
               <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-neutral-600 sm:max-w-md">
                 <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">
                   tiktok.com/@
                 </span>
+
                 <input
                   type="text"
                   name="tikTokUsername"
@@ -122,6 +147,12 @@ export const SocialMediaAccountsForm = ({
                 />
               </div>
             </div>
+
+            {validationErrors?.tikTokUsername && (
+              <p className="mt-2 text-sm text-red-600">
+                {validationErrors.tikTokUsername.join(", ")}
+              </p>
+            )}
           </div>
         </div>
 
@@ -133,6 +164,7 @@ export const SocialMediaAccountsForm = ({
             >
               Other
             </label>
+
             <div className="mt-2">
               <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-neutral-600 sm:max-w-md">
                 <input
@@ -145,6 +177,12 @@ export const SocialMediaAccountsForm = ({
                 />
               </div>
             </div>
+
+            {validationErrors?.otherLink && (
+              <p className="mt-2 text-sm text-red-600">
+                {validationErrors.otherLink.join(", ")}
+              </p>
+            )}
           </div>
         </div>
       </div>

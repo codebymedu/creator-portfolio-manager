@@ -10,6 +10,12 @@ export const SkillsForm = ({ validationErrors }: SkillsFormProps) => (
       </h2>
 
       <SkillMultiSelect />
+
+      {validationErrors && (
+        <p className="mt-2 text-sm text-red-600">
+          {validationErrors.join(", ")}
+        </p>
+      )}
     </div>
   </div>
 );

@@ -14,7 +14,9 @@ import { useState } from "react";
 import { BiChevronDown, BiCheck } from "react-icons/bi";
 import { Option } from "@/_types/select";
 
-export const RoleSelect = () => {
+type RoleSelectProps = { validationErrors?: string[] };
+
+export const RoleSelect = ({ validationErrors }: RoleSelectProps) => {
   const [query, setQuery] = useState("");
   const [selectedRole, setSelectedRole] = useState<Option | null>(null);
 
@@ -94,6 +96,10 @@ export const RoleSelect = () => {
           </ComboboxOptions>
         )}
       </div>
+
+      {validationErrors && (
+        <p className="text-sm text-red-600">{validationErrors.join(", ")}</p>
+      )}
     </Combobox>
   );
 };

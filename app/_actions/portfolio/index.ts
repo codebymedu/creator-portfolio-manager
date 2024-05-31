@@ -19,7 +19,7 @@ export const editPortfolio = async (
     youtubeUsername: formData.get("youtubeUsername") as string,
     tikTokUsername: formData.get("tikTokUsername") as string,
     otherLink: formData.get("otherLink") as string,
-    skills: formData.getAll("skills") as string[],
+    skills: formData.getAll("skill") as string[],
   });
 
   if (!validatedFields.success) {
