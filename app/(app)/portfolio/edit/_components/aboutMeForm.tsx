@@ -1,7 +1,29 @@
 import { RoleSelect } from "@/_components/roleSelect";
+import { ChangeEvent, useState } from "react";
 import { HiUser } from "react-icons/hi2";
 
 export const AboutMeForm = () => {
+  // --- STATE ---
+
+  const [imagePreview, setImagePreview] = useState<string | null>(null);
+
+  // --- CALLBACKS ---
+
+  const handleImageChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const uploadedFile = event.target.files?.[0];
+
+    if (!uploadedFile) {
+      return;
+    }
+
+    const fileReader = new FileReader();
+
+    fileReader.onloadend = () => {
+      setImagePreview(fileReader.result as string);
+    };
+    fileReader.readAsDataURL(uploadedFile);
+  };
+
   // --- RENDER ---
 
   return (
@@ -113,12 +135,27 @@ export const AboutMeForm = () => {
             <div className="mt-2 flex items-center gap-x-3">
               <HiUser className="h-12 w-12 text-gray-300" aria-hidden="true" />
 
-              <button
-                type="button"
-                className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+              <input
+                type="file"
+                id="profilePicture"
+                name="profilePicture"
+                className="hidden"
+                onChange={handleImageChange}
+              />
+              <label
+                htmlFor="profilePicture"
+                className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 cursor-pointer"
               >
                 Change
-              </button>
+              </label>
+
+              {imagePreview && (
+                <img
+                  src={imagePreview}
+                  className="h-12 w-12 rounded-full"
+                  alt="Profile preview"
+                />
+              )}
             </div>
           </div>
         </div>
