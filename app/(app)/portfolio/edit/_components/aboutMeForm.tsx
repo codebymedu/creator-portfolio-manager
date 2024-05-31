@@ -2,7 +2,17 @@ import { RoleSelect } from "@/_components/roleSelect";
 import { ChangeEvent, useState } from "react";
 import { HiUser } from "react-icons/hi2";
 
-export const AboutMeForm = () => {
+type AboutMeFormProps = {
+  validationErrors?: {
+    publicName?: string[];
+    username?: string[];
+    headline?: string[];
+    about?: string[];
+    photo?: string[];
+  };
+};
+
+export const AboutMeForm = ({ validationErrors }: AboutMeFormProps) => {
   // --- STATE ---
 
   const [imagePreview, setImagePreview] = useState<string | null>(null);

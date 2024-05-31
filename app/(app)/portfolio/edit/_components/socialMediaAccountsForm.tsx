@@ -1,4 +1,16 @@
-export const SocialMediaAccountsForm = () => {
+type SocialMediaAccountsFormProps = {
+  validationErrors?: {
+    instagramUsername?: string[];
+    xUsername?: string[];
+    youtubeUsername?: string[];
+    tikTokUsername?: string[];
+    otherLink?: string[];
+  };
+};
+
+export const SocialMediaAccountsForm = ({
+  validationErrors,
+}: SocialMediaAccountsFormProps) => {
   // --- RENDER ---
 
   return (

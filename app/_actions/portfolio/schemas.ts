@@ -2,10 +2,10 @@ import { ROLES } from "@/_utils/roles";
 import { SKILLS } from "@/_utils/skills";
 import { z } from "zod";
 
-export const FormSchema = z.object({
-  name: z
+export const EditPortfolioFormSchema = z.object({
+  publicName: z
     .string()
-    .min(1, "Name is required")
+    .min(1, "Public name is required")
     .max(100, "Name must be 100 characters or less"),
   role: z.enum(ROLES.map(({ value }) => value) as [string, ...string[]]),
   username: z
@@ -18,7 +18,7 @@ export const FormSchema = z.object({
   instagramUsername: z.string().url("Must be a valid URL"),
   xUsername: z.string().url("Must be a valid URL"),
   youtubeUsername: z.string().url("Must be a valid URL"),
-  tiktokUsername: z.string().url("Must be a valid URL"),
+  tikTokUsername: z.string().url("Must be a valid URL"),
   otherLink: z.string().url("Must be a valid URL"),
   skills: z.array(
     z.enum(SKILLS.map(({ value }) => value) as [string, ...string[]])
