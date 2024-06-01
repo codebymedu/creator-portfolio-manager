@@ -29,9 +29,13 @@ const Page = () => {
 
         <div className="flex w-full justify-center gap-8 lg:gap-4 mb-12 lg:mb-8">
           <SocialMediaLink link="#" socialMedia="instagram" />
+
           <SocialMediaLink link="#" socialMedia="tiktok" />
+
           <SocialMediaLink link="#" socialMedia="twitter" />
+
           <SocialMediaLink link="#" socialMedia="youtube" />
+
           <SocialMediaLink link="#" socialMedia="other" />
         </div>
 
