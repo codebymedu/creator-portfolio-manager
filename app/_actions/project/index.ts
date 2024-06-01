@@ -7,6 +7,7 @@ export const addProject = async (
   prevState: AddProjectState,
   formData: FormData
 ): Promise<AddProjectState> => {
+  console.log({ formData });
   const validatedFields = AddProjectFormSchema.safeParse({
     photo: formData.get("photo"),
     moreDetailsLink: formData.get("moreDetailsLink"),

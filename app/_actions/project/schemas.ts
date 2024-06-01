@@ -4,7 +4,7 @@ export const AddProjectFormSchema = z.object({
   photo: z.instanceof(File, {
     message: "Photo is required and must be an image",
   }),
-  moreDetailsLink: z.string().url().optional(),
+  moreDetailsLink: z.union([z.string().url(), z.literal("")]).optional(),
   title: z.string().min(3, "Title is required"),
   shortDescription: z
     .string()
