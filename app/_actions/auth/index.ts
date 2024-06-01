@@ -1,5 +1,5 @@
-import { CreateUserState } from "@/_actions/auth/types";
-import { CreateUserFormSchema } from "@/_actions/auth/schemas";
+import { CreateUserState, LoginUserState } from "@/_actions/auth/types";
+import { CreateUserFormSchema, LoginFormSchema } from "@/_actions/auth/schemas";
 
 export const createUser = async (
   prevState: CreateUserState,
@@ -7,6 +7,25 @@ export const createUser = async (
 ): Promise<CreateUserState> => {
   const validatedFields = CreateUserFormSchema.safeParse({
     username: formData.get("username"),
+    email: formData.get("email"),
+    password: formData.get("password"),
+  });
+
+  if (!validatedFields.success) {
+    return {
+      status: "error",
+      errors: validatedFields.error.flatten().fieldErrors,
+    };
+  }
+
+  return { status: "success" };
+};
+
+export const loginUser = async (
+  prevState: LoginUserState,
+  formData: FormData
+): Promise<LoginUserState> => {
+  const validatedFields = LoginFormSchema.safeParse({
     email: formData.get("email"),
     password: formData.get("password"),
   });

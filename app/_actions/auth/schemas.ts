@@ -11,3 +11,11 @@ export const CreateUserFormSchema = z.object({
     .min(8, "Password must be at least 8 characters long,")
     .max(124, "Password cannot be longer than 124 characters."),
 });
+
+export const LoginFormSchema = z.object({
+  email: z.string().email("Please provide a valid email."),
+  password: z
+    .string()
+    .min(8, "Password must be at least 8 characters long,")
+    .max(124, "Password cannot be longer than 124 characters."),
+});
