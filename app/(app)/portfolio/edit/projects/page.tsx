@@ -22,7 +22,7 @@ const Page = () => (
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
         <div>
-          <Button className="w-full bg-transparent bg-red-600 hover:bg-red-700 gap-2">
+          <Button className="w-full text-center bg-red-600 hover:bg-red-700 gap-2">
             <HiXMark className="text-2xl" /> Delete
           </Button>
 
@@ -34,7 +34,7 @@ const Page = () => (
         </div>
 
         <div>
-          <Button className="w-full bg-transparent bg-red-600 hover:bg-red-700 gap-2">
+          <Button className="w-full  bg-red-600 hover:bg-red-700 gap-2">
             <HiXMark className="text-2xl" /> Delete
           </Button>
 
@@ -46,7 +46,7 @@ const Page = () => (
         </div>
 
         <div>
-          <Button className="w-full bg-transparent bg-red-600 hover:bg-red-700 gap-2">
+          <Button className="w-full  bg-red-600 hover:bg-red-700 gap-2">
             <HiXMark className="text-2xl" /> Delete
           </Button>
 

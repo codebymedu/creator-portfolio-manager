@@ -1,5 +1,3 @@
-"use client";
-
 import { addProject } from "@/_actions/project";
 import { Button } from "@/_components/button";
 import { useFormState } from "react-dom";
