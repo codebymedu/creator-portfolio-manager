@@ -30,6 +30,8 @@ export const editPortfolio = async (
   }
 
   // TODO: Add authorization so you can edit only your portfolio
+  // TODO: Edit portfolio
+  // TODO: Revalidate page
 
   return { status: "success" };
 };

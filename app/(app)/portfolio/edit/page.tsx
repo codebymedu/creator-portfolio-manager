@@ -5,7 +5,7 @@ const Page = () => {
   // --- RENDER ---
 
   return (
-    <div className="px-4">
+    <div className="">
       <Title className="mb-2">Customize your portfolio</Title>
 
       <p className="mt-1 text-sm leading-6 text-gray-600 mb-8">
