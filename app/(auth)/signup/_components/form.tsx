@@ -16,6 +16,31 @@ export const SignUpForm = () => {
     <form className="space-y-6" action={dispatchCreateUser}>
       <div>
         <label
+          htmlFor="publicName"
+          className="block text-sm font-medium leading-6 text-gray-900"
+        >
+          Your public name
+        </label>
+
+        <div className="mt-2">
+          <input
+            id="publicName"
+            name="publicName"
+            type="text"
+            autoComplete="publicName"
+            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-neutral-900 sm:text-sm sm:leading-6"
+          />
+
+          {formState?.errors?.publicName && (
+            <p className="text-sm text-red-600">
+              {formState?.errors?.publicName.join(", ")}
+            </p>
+          )}
+        </div>
+      </div>
+
+      <div>
+        <label
           htmlFor="username"
           className="block text-sm font-medium leading-6 text-gray-900"
         >

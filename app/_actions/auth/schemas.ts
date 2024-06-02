@@ -5,6 +5,10 @@ export const CreateUserFormSchema = z.object({
     .string()
     .min(4, "Username must be at least 4 characters long.")
     .max(64, "Username must be shorter than 64 characters."),
+  publicName: z
+    .string()
+    .min(4, "Name must be at least 4 characters long.")
+    .max(64, "Name must be shorter than 64 characters."),
   email: z.string().email("Please provide a valid email."),
   password: z
     .string()

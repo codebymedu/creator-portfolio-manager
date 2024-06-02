@@ -1,3 +1,5 @@
+"use server";
+
 import { EditUserState } from "@/_actions/user/types";
 import { EditUserFormSchema } from "@/_actions/user/schemas";
 
