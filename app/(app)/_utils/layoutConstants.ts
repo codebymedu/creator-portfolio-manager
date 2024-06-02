@@ -2,6 +2,7 @@ import { HiOutlineBriefcase } from "react-icons/hi2";
 import { RiHome6Line } from "react-icons/ri";
 import { AiFillThunderbolt } from "react-icons/ai";
 import { MdOutlineAttachMoney } from "react-icons/md";
+import { logoutUser } from "@/_actions/auth";
 
 export const navigationLinks = [
   { id: "dashboard", name: "Dashboard", href: "/dashboard", icon: RiHome6Line },
@@ -27,5 +28,5 @@ export const navigationLinks = [
 
 export const userNavigationLinks = [
   { name: "Your profile", href: "/settings" },
-  { name: "Sign out", href: "#" },
+  { name: "Sign out", action: () => logoutUser() },
 ];

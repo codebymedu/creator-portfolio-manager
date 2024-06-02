@@ -1,16 +1,8 @@
-import {
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
-  Transition,
-} from "@headlessui/react";
+import { Menu, MenuButton, MenuItems, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { HiChevronDown } from "react-icons/hi2";
-import { userNavigationLinks } from "@/(app)/_utils/layoutConstants";
-import clsx from "clsx";
-import Link from "next/link";
 import { LayoutHeaderCloseSideBarButton } from "@/(app)/_components/header/closeSideBarButton";
+import { HeaderNavigationLinks } from "@/(app)/_components/header/navigationLinks";
 
 export const LayoutHeader = () => (
   <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-gray-200 bg-white px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">
@@ -55,18 +47,7 @@ export const LayoutHeader = () => (
             leaveTo="transform opacity-0 scale-95"
           >
             <MenuItems className="absolute right-0 z-10 mt-2.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none">
-              {userNavigationLinks.map((item) => (
-                <MenuItem key={item.name}>
-                  <Link
-                    href={item.href}
-                    className={clsx(
-                      "block px-3 py-1 text-sm leading-6 text-gray-900"
-                    )}
-                  >
-                    {item.name}
-                  </Link>
-                </MenuItem>
-              ))}
+              <HeaderNavigationLinks />
             </MenuItems>
           </Transition>
         </Menu>

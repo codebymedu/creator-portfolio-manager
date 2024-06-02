@@ -95,9 +95,17 @@ export const loginUser = async (
   if (authenticationError) {
     return {
       status: "error",
-      errors: { general: ["Your credentials don't seem correct"] },
+      errors: { general: ["The credentials are not correct!"] },
     };
   }
 
   redirect("/dashboard");
+};
+
+export const logoutUser = async () => {
+  const supabase = createClient();
+
+  await supabase.auth.signOut();
+
+  redirect("/signin");
 };
