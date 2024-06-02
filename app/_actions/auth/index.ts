@@ -86,5 +86,18 @@ export const loginUser = async (
     };
   }
 
-  return { status: "success" };
+  const supabase = createClient();
+
+  const { error: authenticationError } = await supabase.auth.signInWithPassword(
+    validatedFields.data
+  );
+
+  if (authenticationError) {
+    return {
+      status: "error",
+      errors: { general: ["Your credentials don't seem correct"] },
+    };
+  }
+
+  redirect("/dashboard");
 };

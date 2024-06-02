@@ -9,6 +9,10 @@ export type CreateUserState = {
 };
 
 export type LoginUserState = {
-  errors?: Partial<Record<keyof z.infer<typeof LoginFormSchema>, string[]>>;
+  errors?: Partial<
+    Record<keyof z.infer<typeof LoginFormSchema>, string[]> & {
+      general: string[];
+    }
+  >;
   status: "success" | "error" | null;
 };

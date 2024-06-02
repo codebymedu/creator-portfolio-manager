@@ -14,6 +14,12 @@ export const SignInForm = () => {
 
   return (
     <form className="space-y-6" action={dispatchLoginUser}>
+      {formState?.errors?.general && (
+        <p className="text-sm text-red-600">
+          {formState?.errors?.general.join(", ")}
+        </p>
+      )}
+
       <div>
         <label
           htmlFor="email"
