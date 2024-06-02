@@ -1,7 +1,24 @@
 import { Title } from "@/_components/title";
 import { EditPortfolioForm } from "@/(app)/portfolio/edit/_components/form";
+import { createClient } from "@/_lib/supabase/server";
+import { redirect } from "next/navigation";
 
-const Page = () => {
+const Page = async () => {
+  const supabase = createClient();
+
+  // --- DATA ---
+
+  const {
+    data: { user },
+    error,
+  } = await supabase.auth.getUser();
+
+  // --- RENDER ---
+
+  if (error || !user) {
+    redirect("/signin");
+  }
+
   // --- RENDER ---
 
   return (

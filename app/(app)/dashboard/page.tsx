@@ -1,3 +1,6 @@
+import { createClient } from "@/_lib/supabase/server";
+import { redirect } from "next/navigation";
+
 const stats = [
   { id: 1, name: "Visitors today", value: "20" },
   { id: 2, name: "Visitors in the last 7 days", value: "143" },
@@ -5,7 +8,22 @@ const stats = [
   { id: 4, name: "Lifetime visitors", value: "1504" },
 ];
 
-const Page = () => {
+const Page = async () => {
+  const supabase = createClient();
+
+  // --- DATA ---
+
+  const {
+    data: { user },
+    error,
+  } = await supabase.auth.getUser();
+
+  // --- RENDER ---
+
+  if (error || !user) {
+    redirect("/signin");
+  }
+
   // --- RENDER ---
 
   return (
