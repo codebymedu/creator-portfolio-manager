@@ -2,14 +2,28 @@
 
 import { editUser } from "@/_actions/user";
 import { Button } from "@/_components/button";
+import { useEffect } from "react";
 import { useFormState } from "react-dom";
+import toast from "react-hot-toast";
 
-export const UserSettingsForm = () => {
+type UserSettingsFormProps = {
+  userEmail?: string;
+};
+
+export const UserSettingsForm = ({ userEmail }: UserSettingsFormProps) => {
   // --- STATE ---
 
   const [formState, dispatchEditUser] = useFormState(editUser, {
     status: null,
   });
+
+  // --- EFFECTS ---
+
+  useEffect(() => {
+    if (formState.status === "success") {
+      toast.success("Profile updated successfully!");
+    }
+  }, [formState.status]);
 
   // --- RENDER ---
 
@@ -36,9 +50,9 @@ export const UserSettingsForm = () => {
                 name="email"
                 type="email"
                 disabled
-                value="myemail@gmail.com"
+                value={userEmail}
                 autoComplete="email"
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 py-1.5 text-gray-600 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>

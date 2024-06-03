@@ -18,7 +18,7 @@ const Page = async () => {
     redirect("/signin");
   }
 
-  return <UserSettingsForm />;
+  return <UserSettingsForm userEmail={user.email} />;
 };
 
 export default Page;

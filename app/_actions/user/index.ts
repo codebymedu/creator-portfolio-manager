@@ -2,6 +2,7 @@
 
 import { EditUserState } from "@/_actions/user/types";
 import { EditUserFormSchema } from "@/_actions/user/schemas";
+import { createClient } from "@/_lib/supabase";
 
 export const editUser = async (
   prevState: EditUserState,
@@ -15,6 +16,17 @@ export const editUser = async (
     return {
       status: "error",
       errors: validatedFields.error.flatten().fieldErrors,
+    };
+  }
+
+  const supabase = createClient();
+
+  const { error } = await supabase.auth.updateUser(validatedFields.data);
+
+  if (error) {
+    return {
+      status: "error",
+      errors: { password: [error.message] },
     };
   }
 
