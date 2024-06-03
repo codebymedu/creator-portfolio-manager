@@ -1,6 +1,7 @@
 import { UserSettingsForm } from "@/(app)/settings/_components/form";
 import { createClient } from "@/_lib/supabase/server";
 import { redirect } from "next/navigation";
+import { UserSettingsDeleteAccount } from "@/(app)/settings/_components/deleteAccount";
 
 const Page = async () => {
   const supabase = createClient();
@@ -18,7 +19,13 @@ const Page = async () => {
     redirect("/signin");
   }
 
-  return <UserSettingsForm userEmail={user.email} />;
+  return (
+    <>
+      <UserSettingsForm userEmail={user.email} />
+
+      <UserSettingsDeleteAccount />
+    </>
+  );
 };
 
 export default Page;

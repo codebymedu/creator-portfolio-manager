@@ -83,10 +83,6 @@ export const UserSettingsForm = ({ userEmail }: UserSettingsFormProps) => {
         </div>
 
         <div className="flex mt-12 md:mt-5 gap-6 flex-col md:flex-row">
-          <Button className="text-white bg-red-500 hover:bg-red-600 px-8 lg:px-8">
-            Delete my account
-          </Button>
-
           <Button type="submit" className="px-8 lg:px-8">
             Save Change
           </Button>
