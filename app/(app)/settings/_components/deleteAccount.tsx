@@ -1,5 +1,6 @@
 "use client";
 
+import { deleteMyAccount } from "@/_actions/user";
 import { Button } from "@/_components/button";
 
 export const UserSettingsDeleteAccount = () => {
@@ -16,7 +17,10 @@ export const UserSettingsDeleteAccount = () => {
         cannot be reverted!
       </p>
 
-      <Button className="text-white bg-red-500 hover:bg-red-600 px-8 lg:px-8">
+      <Button
+        handleClick={() => deleteMyAccount()}
+        className="text-white bg-red-500 hover:bg-red-600 px-8 lg:px-8"
+      >
         Delete my account
       </Button>
     </div>
