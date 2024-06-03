@@ -37,12 +37,16 @@ export const createUser = async (
     };
   }
 
-  const {
-    data: { user },
-    error,
-  } = await supabase.auth.signUp({
+  const { error } = await supabase.auth.signUp({
     email: validatedFields.data.email,
     password: validatedFields.data.password,
+    options: {
+      data: {
+        username: validatedFields.data.username,
+        public_name: validatedFields.data.publicName,
+        is_portfolio_created: false,
+      },
+    },
   });
 
   if (error) {
@@ -60,12 +64,7 @@ export const createUser = async (
       },
     };
   }
-
-  supabase.from("portfolios").insert({
-    user_id: user?.id,
-    username: validatedFields.data.username,
-    public_name: validatedFields.data.publicName,
-  });
+  // TODO: Fix flow here & Show feedback that user must confirm their email.
 
   redirect("/dashboard");
 };
@@ -93,6 +92,13 @@ export const loginUser = async (
   );
 
   if (authenticationError) {
+    if (authenticationError.message === "Email not confirmed") {
+      return {
+        status: "error",
+        errors: { general: ["Please confirm your email!"] },
+      };
+    }
+
     return {
       status: "error",
       errors: { general: ["The credentials are not correct!"] },

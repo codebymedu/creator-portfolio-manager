@@ -18,10 +18,18 @@ const Page = async () => {
     error,
   } = await supabase.auth.getUser();
 
-  // --- RENDER ---
-
   if (error || !user) {
     redirect("/signin");
+  }
+
+  if (!user?.user_metadata.is_portfolio_created && user) {
+    await supabase.from("portfolios").insert({
+      user_id: user?.id,
+      public_name: user.user_metadata.public_name,
+      username: user.user_metadata.username,
+    });
+
+    supabase.auth.updateUser({ data: { is_portfolio_created: true } });
   }
 
   // --- RENDER ---
