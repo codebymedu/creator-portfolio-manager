@@ -64,9 +64,8 @@ export const createUser = async (
       },
     };
   }
-  // TODO: Fix flow here & Show feedback that user must confirm their email.
 
-  redirect("/dashboard");
+  return { status: "success" };
 };
 
 export const loginUser = async (

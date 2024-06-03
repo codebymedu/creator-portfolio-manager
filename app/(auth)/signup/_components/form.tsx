@@ -2,6 +2,7 @@
 
 import { createUser } from "@/_actions/auth";
 import { useFormState } from "react-dom";
+import { SignUpConfirmEmailDialog } from "@/(auth)/signup/_components/confirmEmailDialog";
 
 export const SignUpForm = () => {
   // --- STATE ---
@@ -123,6 +124,8 @@ export const SignUpForm = () => {
           Sign up
         </button>
       </div>
+
+      <SignUpConfirmEmailDialog isOpen={formState.status === "success"} />
     </form>
   );
 };
