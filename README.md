@@ -1,6 +1,6 @@
 # Influencer Creator Profile
 
-🔗 **Demo**: Link to demo
+🔗 **Demo**: [Click here](https://creator-portfolio-manager-yz9f.vercel.app)
 
 🚧 **Status**: In Progress
 
@@ -12,16 +12,16 @@ This project is currently in development and represents the minimum viable produ
 
 ## Features
 
-- Create a Portfolio: Creators can set up their portfolio in minutes.
-- Add Gigs: (Upcoming) Creators will be able to post gigs directly in their portfolios.
-- Interaction with Brands: (Upcoming) Brands and other users can view these gigs and contact creators to purchase their services directly through the platform.
+- **Create a Portfolio**: (Work in progress) Creators can set up their portfolio in minutes.
+- **Add Gigs**: (Upcoming) Creators will be able to post gigs directly in their portfolios.
+- **Interaction with Brands**: (Upcoming) Brands and other users can view these gigs and contact creators to purchase their services directly through the platform.
 
 ## Technologies Used
 
 - Next.js 14
 - React Components (Server and Client side)
 - Server Actions
-- Supabase (for backend services)
+- Supabase (for backend)
 - TailwindCSS (for styling)
 
 ## Project Status
