@@ -1,4 +1,4 @@
-# Influencer Creator Profile
+# Influencer Portfolio Creator
 
 🔗 **Demo**: [Click here](https://creator-portfolio-manager-yz9f.vercel.app)
 
