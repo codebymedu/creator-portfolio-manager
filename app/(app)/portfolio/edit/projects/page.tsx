@@ -28,7 +28,7 @@ const Page = async () => {
       <Title className="mb-2">Add your projects</Title>
 
       <p className="mt-1 text-sm leading-6 text-gray-600 mb-8">
-        Show your audience what you've created so far :)
+        Show your audience what you&apos;ve created so far :)
       </p>
 
       <div className="space-y-12 mt-4">

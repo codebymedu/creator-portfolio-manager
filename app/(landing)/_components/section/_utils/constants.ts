@@ -48,7 +48,7 @@ export const features = [
   {
     name: "Job Listings (coming soon)",
     description:
-      "Add your experiences and gigs to your portfolio. Show brands what you've done and what you can do.",
+      "Add your experiences and gigs to your portfolio. Show brands what you&apos;ve done and what you can do.",
     icon: HiOutlineDocumentText,
   },
 ];
@@ -63,7 +63,7 @@ export const benefits = [
       },
       {
         description:
-          "Add your job experiences and gigs to your portfolio. Show brands what you've done and what you can do.",
+          "Add your job experiences and gigs to your portfolio. Show brands what you&apos;ve done and what you can do.",
         title: "Job Listings (coming soon)",
       },
       {

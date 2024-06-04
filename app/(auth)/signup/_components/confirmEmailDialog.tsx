@@ -68,8 +68,8 @@ export const SignUpConfirmEmailDialog = ({
 
                     <div className="mt-2">
                       <p className="text-sm text-neutral-500">
-                        We've sent you an email. Please click in the link to
-                        confirm your email address and login.
+                        We&apos;ve sent you an email. Please click in the link
+                        to confirm your email address and login.
                       </p>
                     </div>
                   </div>

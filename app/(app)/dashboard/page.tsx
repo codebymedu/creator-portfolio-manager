@@ -63,7 +63,7 @@ const Page = async () => {
 
           <div className="text-center mt-8">
             <p className="mt-4 text-lg leading-8 text-neutral-600">
-              We're creating more advanced analytics for you.
+              We&apos;re creating more advanced analytics for you.
             </p>
           </div>
         </div>

@@ -53,8 +53,8 @@ export const HeroSection = () => (
         </h1>
 
         <p className="mt-6 text-lg leading-8 text-gray-600">
-          Create a stunning portfolio and connect with top brands. It's easy and
-          completely free!
+          Create a stunning portfolio and connect with top brands. It&apos;s
+          easy and completely free!
         </p>
 
         <div className="mt-5 md:mt-10 flex items-center gap-x-6">

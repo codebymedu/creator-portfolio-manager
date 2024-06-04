@@ -10,10 +10,12 @@ export const AboutMeSection = () => (
     className="p-12 flex justify-between flex-col h-full bg-neutral-100 w-full rounded-xl"
   >
     <div className="mb-8">
-      <p className="text-xl lg:text-2xl text-neutral-400 mb-4">Hi, I'm Medu</p>
+      <p className="text-xl lg:text-2xl text-neutral-400 mb-4">
+        Hi, I&apos;m Medu
+      </p>
 
       <Title className="mb-4">
-        I'm a Frontend Developer and Content Creator based in Germany
+        I&apos;m a Frontend Developer and Content Creator based in Germany
       </Title>
 
       <p className="text-neutral-600 mb-8">

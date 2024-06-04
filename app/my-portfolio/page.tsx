@@ -24,7 +24,7 @@ const Page = () => {
         <p className="text-neutral-400 text-xl">Frontend Engineer</p>
 
         <p className="text-2xl font-semibold mt-2 text-neutral-900 mb-8 lg:mb-4">
-          Hi, I'm Medu
+          Hi, I&apos;m Medu
         </p>
 
         <div className="flex w-full justify-center gap-8 lg:gap-4 mb-12 lg:mb-8">
@@ -53,7 +53,7 @@ const Page = () => {
         <SkillsSection />
 
         <h1 className="text-neutral-900 text-4xl font-bold  text-center w-full">
-          Let's Create Something Amazing Together!
+          Let&apos;s Create Something Amazing Together!
         </h1>
 
         <p className="text-neutral-900 text-xl lg:text-sm -mt-8 text-center w-full mb-32">
